@@ -26,14 +26,21 @@ scanf("%i", &F);
 C = (5.0/9.0) * (F - 32.0);
 printf("In celsius %.2f", C);
 }
-void checkYearBisect(int year) {
+void checkYear(int year) {
     if (year % 4 == 0 && year % 100 != 0) {
        printf("%d is bisect", year);
     } else {
        printf("%d is NOT bisect", year );
     }
 }
+void getAllNumDivided(int divider ,int from, int to) {
+      for (int i = from; i <= to; i++) {
+        if (i % divider == 0) {
+          printf("%d\n", i);
+        }
+      }
+}
 void main() {
     firstPrimeNumbers(16);
-   
+    getAllNumDivided(2, 1, 50);
 }
